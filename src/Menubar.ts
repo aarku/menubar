@@ -85,6 +85,14 @@ export class Menubar extends EventEmitter {
 	}
 
 	/**
+	 * Returns whether or not the Electron [BrowserWindow](https://electronjs.org/docs/api/browser-window)
+	 * instance is present and being shown. This does not test whether or not the window is currently obstructed.
+	 */
+	get isVisible(): boolean {
+		return this._isVisible;
+	}
+
+	/**
 	 * Retrieve a menubar option.
 	 *
 	 * @param key - The option key to retrieve, see {@link Options}.
